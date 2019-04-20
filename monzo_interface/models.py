@@ -27,7 +27,7 @@ class Merchant(Base):
     approximate = Column(Boolean)
 
     def __repr__(self):
-        return f"<Merchant(id={id}, name={name})>"
+        return f"<Merchant(id={self.id}, name={self.name})>"
 
 
 class Transaction(Base):
@@ -46,4 +46,4 @@ class Transaction(Base):
     include_in_spending = Column(Boolean)
 
     def __repr__(self):
-        return f"<Transaction(id={id}, amount={amount})>"
+        return f"<Transaction(id={self.id}, amount={self.amount})>"
