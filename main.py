@@ -1,19 +1,22 @@
-from dateutil.parser import parse
-
-from monzo_interface.db_helpers import get_session, get_engine, get_or_create_by_id
+from monzo_interface.db_helpers import get_session, get_or_create_by_id, write_models
 from monzo_interface.models import Merchant, Transaction
+from monzo_interface.transaction_parser import parse_merchant, parse_transaction
+from monzo_interface.monzo_api import load_transaction_list
 
 
-fake_transaction = {
-    "id": "tsegserserhX",
-    "created": parse("2018-12-10T09:22:08.45Z"),
-    "description": "BBC MEDIA CITY SALFORD SALFORD GBR",
-    "amount": -2150,
-    "currency": "GBP",
-}
+def import_data():
+    raw_transactions = load_transaction_list()
+    session = get_session()
+
+    for raw_transaction in raw_transactions:
+        transaction_data = parse_transaction(raw_transaction)
+        merchant_data = parse_merchant(raw_transaction)
+
+        transaction = get_or_create_by_id(Transaction, session, **transaction_data)
+        if merchant_data:
+            merchant = get_or_create_by_id(Merchant, session, **merchant_data)
+            transaction.merchant = merchant
+    session.commit()
 
 
-# playing around
-id = fake_transaction.pop("id")
-a = get_or_create_by_id(Transaction, id, **fake_transaction)
-print(a)
+import_data()

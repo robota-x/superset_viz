@@ -35,4 +35,4 @@ def load_transaction_list(update_cache=False):
             transaction_list = fetch_transaction_list_from_api()
             json.dump(transaction_list, file)
 
-    return transaction_list
+    return transaction_list.get("transactions", [])

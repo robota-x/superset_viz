@@ -30,12 +30,12 @@ def write_models():
     Base.metadata.create_all(engine)
 
 
-def get_or_create_by_id(Model, id, **kwargs):
-    session = get_session()
+def get_or_create_by_id(Model, session, id=None, **kwargs):
+    id = id or kwargs.pop("id")
     entry = session.query(Model).filter(Model.id == id).first()
 
     if not entry:
         entry = Model(id=id, **kwargs)
         session.add(entry)
-        session.commit()
+
     return entry

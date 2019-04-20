@@ -1,31 +1,36 @@
-def parse_merchant(data):
-    return {
-        "id": data.get("id"),
-        "name": data.get("name"),
-        "category": data.get("category"),
-        "logo": data.get("logo"),
-        "latitude": data.get("address", {}).get("latitude"),
-        "longitude": data.get("address", {}).get("longitude"),
-        "postcode": data.get("address", {}).get("postcode"),
-        "city": data.get("address", {}).get("city"),
-        "region": data.get("address", {}).get("region"),
-        "country": data.get("address", {}).get("country"),
-        "address": data.get("address", {}).get("address"),
-        "online": data.get("online"),
-        "atm": data.get("atm"),
-        "approximate": data.get("address", {}).get("approximate"),
-    }
+from dateutil.parser import parse
 
 
-def parse_transaction(data):
+def parse_merchant(raw_transaction):
+    raw_merchant = raw_transaction.get("merchant")
+
+    if raw_merchant:
+        return {
+            "id": raw_merchant.get("id"),
+            "name": raw_merchant.get("name"),
+            "category": raw_merchant.get("category"),
+            "logo": raw_merchant.get("logo"),
+            "latitude": raw_merchant.get("address", {}).get("latitude"),
+            "longitude": raw_merchant.get("address", {}).get("longitude"),
+            "postcode": raw_merchant.get("address", {}).get("postcode"),
+            "city": raw_merchant.get("address", {}).get("city"),
+            "region": raw_merchant.get("address", {}).get("region"),
+            "country": raw_merchant.get("address", {}).get("country"),
+            "address": raw_merchant.get("address", {}).get("address"),
+            "online": raw_merchant.get("online"),
+            "atm": raw_merchant.get("atm"),
+            "approximate": raw_merchant.get("address", {}).get("approximate"),
+        }
+
+
+def parse_transaction(raw_transaction):
     return {
-        "id": data.get("id"),
-        "description": data.get("description"),
-        "created": data.get("created"),
-        "settled": data.get("settled"),
-        "updated": data.get("updated"),
-        "amount": data.get("amount"),
-        "currency": data.get("currency"),
-        "include_in_spending": data.get("include_in_spending"),
-        "merchant_id": data.get("merchant", {}).get("id"),
+        "id": raw_transaction.get("id"),
+        "description": raw_transaction.get("description"),
+        "created": parse(raw_transaction.get("created")),
+        "settled": parse(raw_transaction.get("settled")),
+        "updated": parse(raw_transaction.get("updated")),
+        "amount": raw_transaction.get("amount"),
+        "currency": raw_transaction.get("currency"),
+        "include_in_spending": raw_transaction.get("include_in_spending"),
     }
