@@ -1,10 +1,12 @@
 alembic==1.0.9
 amqp==2.4.2
 apispec==1.2.1
+appdirs==1.4.3
 asn1crypto==0.24.0
 attrs==19.1.0
 Babel==2.6.0
 billiard==3.6.0.0
+black==19.3b0
 bleach==3.1.0
 boto3==1.4.7
 botocore==1.7.48
@@ -86,6 +88,7 @@ tableschema==1.4.1
 tabulator==1.19.3
 thrift==0.11.0
 thrift-sasl==0.3.0
+toml==0.10.0
 tornado==5.1.1
 unicodecsv==0.14.1
 Unidecode==1.0.23
