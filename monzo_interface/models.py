@@ -1,22 +1,49 @@
 from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy import Column, Integer, String, DateTime
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, Float
 
-class Transaction(declarative_base()):
 
-    __tablename__ = 'transactions'
+Base = declarative_base()
 
-    id = Column(Integer, primary_key=True)
 
-    transaction_id = Column(String)
-    created = Column(DateTime)
-    description = Column(String)
-    amount = Column(Integer)
-    currency = Column(String)    
+class Merchan(Base):
+    __tablename__ = "merchants"
+
+    id = Column(String, primary_key=True)
+
+    name = Column(String)
+    category = Column(String)
+    logo = Column(String)
+
+    latitude = Column(Float)
+    longitude = Column(Float)
+    postcode = Column(Boolean)
+    city = Column(Boolean)
+    region = Column(Boolean)
+    country = Column(Boolean)
+    address = Column(Boolean)
+
+    online = Column(Boolean)
+    atm = Column(Boolean)
+    approximate = Column(Boolean)
 
     def __repr__(self):
-       return f"<Transaction(id={transaction_id}, amount={amount})>" 
+        return f"<Merchant(id={id}, name={name})>"
 
-    # def __init__(self):
-    #     if not cls.engine:
-    #         cls.engine = sqlalchemy.create_engine('sqlite:///db.sqlite', echo=True)
 
+class Transaction(Base):
+    __tablename__ = "transactions"
+
+    id = Column(String, primary_key=True)
+
+    description = Column(String)
+
+    created = Column(DateTime)
+    settled = Column(DateTime)
+    updated = Column(DateTime)
+
+    amount = Column(Integer)
+    currency = Column(String)
+    include_in_spending = Column(Boolean)
+
+    def __repr__(self):
+        return f"<Transaction(id={id}, amount={amount})>"
