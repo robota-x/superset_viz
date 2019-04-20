@@ -35,9 +35,7 @@ def get_or_create_by_id(Model, id, **kwargs):
     entry = session.query(Model).filter(Model.id == id).first()
 
     if not entry:
-        print('adding')
         entry = Model(id=id, **kwargs)
         session.add(entry)
         session.commit()
-    print('returning')
     return entry

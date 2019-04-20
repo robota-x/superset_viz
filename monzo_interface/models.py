@@ -17,15 +17,15 @@ class Merchant(Base):
 
     latitude = Column(Float)
     longitude = Column(Float)
-    postcode = Column(Boolean)
-    city = Column(Boolean)
-    region = Column(Boolean)
-    country = Column(Boolean)
-    address = Column(Boolean)
+    postcode = Column(String)
+    city = Column(String)
+    region = Column(String)
+    country = Column(String)
+    address = Column(String)
+    approximate = Column(Boolean)
 
     online = Column(Boolean)
     atm = Column(Boolean)
-    approximate = Column(Boolean)
 
     transactions = relationship("Transaction", back_populates="merchant")
 
