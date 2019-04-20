@@ -31,7 +31,7 @@ def load_transaction_list(update_cache=False):
         print("Missing cache file!")
     if update_cache:
         print("Downloading transaction list...")
-        with open("data/transaction_list.json", "x") as file:
+        with open("data/transaction_list.json", "w") as file:
             transaction_list = fetch_transaction_list_from_api()
             json.dump(transaction_list, file)
 
