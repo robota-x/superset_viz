@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String, DateTime, Boolean, Float
+from sqlalchemy import Column, Integer, String, DateTime, Boolean, Float, ForeignKey
+from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
 
 
@@ -26,6 +27,8 @@ class Merchant(Base):
     atm = Column(Boolean)
     approximate = Column(Boolean)
 
+    transactions = relationship("Transaction", back_populates="merchant")
+
     def __repr__(self):
         return f"<Merchant(id={self.id}, name={self.name})>"
 
@@ -44,6 +47,9 @@ class Transaction(Base):
     amount = Column(Integer)
     currency = Column(String)
     include_in_spending = Column(Boolean)
+
+    merchant_id = Column(String, ForeignKey("merchants.id"))
+    merchant = relationship("Merchant", back_populates="transactions")
 
     def __repr__(self):
         return f"<Transaction(id={self.id}, amount={self.amount})>"

@@ -2,7 +2,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
-Base = declarative_base()
+from .models import Base  # same instance inherited from the models
 
 
 def cache_get_engine():
