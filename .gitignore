@@ -2,3 +2,4 @@ env
 superset_config.py
 .py[cod]
 config.ini
+data
