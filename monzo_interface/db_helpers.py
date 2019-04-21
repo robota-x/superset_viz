@@ -1,8 +1,14 @@
+from configparser import ConfigParser
+
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 from .models import Base  # same instance inherited from the models
+
+
+config = ConfigParser()
+config.read("config.ini")
 
 
 def cache_get_engine():
@@ -11,7 +17,7 @@ def cache_get_engine():
     def get_engine():
         nonlocal engine
         if not engine:
-            engine = create_engine("sqlite:///db.sqlite", echo=False)
+            engine = create_engine(config['DATABASE']['location'], echo=False)
         return engine
 
     return get_engine
