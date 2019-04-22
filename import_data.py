@@ -24,7 +24,7 @@ def import_data(update_cache=False):
             merchant = get_or_create_by_id(Merchant, session, **merchant_data)
 
             transaction.merchant = merchant
-            for value, key in merchant_data.items():
+            for key, value in merchant_data.items():
                 setattr(transaction_denormalized, f"merchant_{key}", value)
 
         print(f"Parsed transaction {transaction}")
