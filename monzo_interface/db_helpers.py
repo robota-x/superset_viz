@@ -17,7 +17,7 @@ def cache_get_engine():
     def get_engine():
         nonlocal engine
         if not engine:
-            engine = create_engine(config['DATABASE']['location'], echo=False)
+            engine = create_engine(f"{config['DATABASE']['location']}_data", echo=False)
         return engine
 
     return get_engine

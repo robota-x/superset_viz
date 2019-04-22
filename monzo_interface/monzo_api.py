@@ -24,7 +24,6 @@ def fetch_transaction_list_from_api():
 def load_transaction_list(update_cache=False):
     try:
         with open("data/transaction_list.json", "r") as file:
-            print("Loading from cache!")
             transaction_list = json.load(file)
     except FileNotFoundError:
         update_cache = True

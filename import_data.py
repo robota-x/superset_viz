@@ -3,6 +3,8 @@ from monzo_interface.models import Merchant, Transaction
 from monzo_interface.transaction_parser import parse_merchant, parse_transaction
 from monzo_interface.monzo_api import load_transaction_list
 
+from sys import argv
+
 
 def import_data(update_cache=False):
     raw_transactions = load_transaction_list(update_cache=update_cache)
@@ -23,7 +25,9 @@ def import_data(update_cache=False):
     session.commit()
 
 
-# write_models()
-import_data(update_cache=True)
-session = get_session()
-print(session.query(Transaction.id).count())
+if __name__ == "__main__":    
+    # write_models()
+
+    import_data(update_cache=True)
+    session = get_session()
+    print(session.query(Transaction.id).count())

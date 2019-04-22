@@ -1,0 +1,125 @@
+databases:
+- allow_run_async: true
+  database_name: card_data
+  expose_in_sqllab: true
+  extra: "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {},\r\n    \"\
+    metadata_cache_timeout\": {},\r\n    \"schemas_allowed_for_csv_upload\": []\r\n\
+    }\r\n"
+  sqlalchemy_uri: postgresql+psycopg2:///superset_data
+  tables:
+  - columns:
+    - column_name: id
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: name
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: category
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: logo
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - avg: true
+      column_name: latitude
+      sum: true
+      type: DOUBLE PRECISION
+    - avg: true
+      column_name: longitude
+      sum: true
+      type: DOUBLE PRECISION
+    - column_name: postcode
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: city
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: region
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: country
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: address
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: approximate
+      type: BOOLEAN
+    - column_name: online
+      type: BOOLEAN
+    - column_name: atm
+      type: BOOLEAN
+    metrics:
+    - expression: SUM(latitude)
+      metric_name: sum__latitude
+      metric_type: sum
+    - expression: AVG(latitude)
+      metric_name: avg__latitude
+      metric_type: avg
+    - expression: SUM(longitude)
+      metric_name: sum__longitude
+      metric_type: sum
+    - expression: AVG(longitude)
+      metric_name: avg__longitude
+      metric_type: avg
+    - expression: COUNT(*)
+      metric_name: count
+      metric_type: count
+      verbose_name: COUNT(*)
+    schema: ''
+    table_name: merchants
+  - columns:
+    - column_name: id
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: description
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: created
+      is_dttm: true
+      type: TIMESTAMP WITHOUT TIME ZONE
+    - column_name: settled
+      is_dttm: true
+      type: TIMESTAMP WITHOUT TIME ZONE
+    - column_name: updated
+      is_dttm: true
+      type: TIMESTAMP WITHOUT TIME ZONE
+    - avg: true
+      column_name: amount
+      sum: true
+      type: INTEGER
+    - column_name: currency
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    - column_name: include_in_spending
+      type: BOOLEAN
+    - column_name: merchant_id
+      filterable: true
+      groupby: true
+      type: VARCHAR
+    main_dttm_col: created
+    metrics:
+    - expression: SUM(amount)
+      metric_name: sum__amount
+      metric_type: sum
+    - expression: AVG(amount)
+      metric_name: avg__amount
+      metric_type: avg
+    - expression: COUNT(*)
+      metric_name: count
+      metric_type: count
+      verbose_name: COUNT(*)
+    schema: ''
+    table_name: transactions
