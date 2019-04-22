@@ -1,5 +1,5 @@
 from monzo_interface.db_helpers import get_session, get_or_create_by_id, write_models
-from monzo_interface.models import Merchant, Transaction
+from monzo_interface.models import Merchant, Transaction, TransactionDenormalized
 from monzo_interface.transaction_parser import parse_merchant, parse_transaction
 from monzo_interface.monzo_api import load_transaction_list
 
@@ -12,12 +12,20 @@ def import_data(update_cache=False):
 
     for raw_transaction in raw_transactions:
         transaction_data = parse_transaction(raw_transaction)
+        transaction_denormalized_data = transaction_data.copy()
         merchant_data = parse_merchant(raw_transaction)
 
         transaction = get_or_create_by_id(Transaction, session, **transaction_data)
+        transaction_denormalized = get_or_create_by_id(
+            TransactionDenormalized, session, **transaction_denormalized_data
+        )
+
         if merchant_data:
             merchant = get_or_create_by_id(Merchant, session, **merchant_data)
+
             transaction.merchant = merchant
+            for value, key in merchant_data.items():
+                setattr(transaction_denormalized, f"merchant_{key}", value)
 
         print(f"Parsed transaction {transaction}")
 
@@ -25,9 +33,9 @@ def import_data(update_cache=False):
     session.commit()
 
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
     # write_models()
 
-    import_data(update_cache=True)
+    import_data(update_cache=False)
     session = get_session()
     print(session.query(Transaction.id).count())
