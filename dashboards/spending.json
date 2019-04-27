@@ -26,7 +26,7 @@
                             "datasource_id": 3,
                             "id": 3,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T22:42:43"
+                                "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -48,7 +48,7 @@
                             "datasource_id": 3,
                             "id": 4,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T22:42:43"
+                                "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -70,7 +70,7 @@
                             "datasource_id": 3,
                             "id": 5,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T22:42:43"
+                                "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -87,12 +87,12 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"deck_hex\", \"slice_id\": 6, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"spatial\": {\"type\": \"latlong\", \"latCol\": \"merchant_latitude\", \"lonCol\": \"merchant_longitude\"}, \"size\": {\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\"}, \"aggregate\": \"SUM\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"SUM(pound_amount)\", \"optionName\": \"metric_fnn28iskmre_qpbyq667ok\"}, \"row_limit\": 10000, \"filter_nulls\": true, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \">\", \"comparator\": \"-1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_5soc28pw7n9_vj5dx2mi8eq\"}, {\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \"<\", \"comparator\": \"1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_ag419y2xshq_ywxw660figg\"}], \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"viewport\": {\"longitude\": -0.16037240000071445, \"latitude\": 51.49680578456782, \"zoom\": 11.826677774575495, \"bearing\": 0, \"pitch\": 35, \"width\": 1191, \"height\": 745, \"altitude\": 1.5, \"maxZoom\": 20, \"minZoom\": 0, \"maxPitch\": 60, \"minPitch\": 0, \"transitionDuration\": 0, \"transitionInterpolator\": {\"propNames\": [\"longitude\", \"latitude\", \"zoom\", \"bearing\", \"pitch\"]}, \"transitionInterruption\": 1}, \"color_picker\": {\"r\": 0, \"g\": 122, \"b\": 135, \"a\": 1}, \"autozoom\": true, \"grid_size\": 50, \"extruded\": true, \"js_columns\": [\"merchant_name\", \"pound_amount\"], \"js_data_mutator\": \"\", \"js_tooltip\": \"info => info.object.points.map(p => `${p.extraProps.merchant_name}: ${p.extraProps.pound_amount}\\u00a3`).join(' | ')\", \"js_onclick_href\": \"\", \"remote_id\": 6, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"deck_hex\", \"slice_id\": 6, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"spatial\": {\"type\": \"latlong\", \"latCol\": \"merchant_latitude\", \"lonCol\": \"merchant_longitude\"}, \"size\": {\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\"}, \"aggregate\": \"SUM\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"SUM(pound_amount)\", \"optionName\": \"metric_fnn28iskmre_qpbyq667ok\"}, \"row_limit\": 50000, \"filter_nulls\": true, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \">\", \"comparator\": \"-1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_5soc28pw7n9_vj5dx2mi8eq\"}, {\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \"<\", \"comparator\": \"1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_ag419y2xshq_ywxw660figg\"}], \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"viewport\": {\"longitude\": -0.16230716196405043, \"latitude\": 51.5150446957785, \"zoom\": 11.877240559099267, \"bearing\": 0, \"pitch\": 35, \"width\": 1191, \"height\": 794, \"altitude\": 1.5, \"maxZoom\": 20, \"minZoom\": 0, \"maxPitch\": 60, \"minPitch\": 0, \"transitionDuration\": 0, \"transitionInterpolator\": {\"propNames\": [\"longitude\", \"latitude\", \"zoom\", \"bearing\", \"pitch\"]}, \"transitionInterruption\": 1}, \"color_picker\": {\"r\": 0, \"g\": 122, \"b\": 135, \"a\": 1}, \"autozoom\": true, \"grid_size\": 50, \"extruded\": true, \"js_columns\": [\"merchant_name\", \"pound_amount\"], \"js_data_mutator\": \"\", \"js_tooltip\": \"info => {\\n  const places = info.object.points.reduce((acc, val) => {\\n    const { merchant_name, pound_amount } = val.extraProps;\\n    acc[merchant_name] = (acc[merchant_name] || 0) + pound_amount;\\n    return acc;\\n  }, {});\\n  return Object.keys(places).map(key => `${key}: ${places[key]}\\u00a3`).join(\\\" | \\\");\\n}\", \"js_onclick_href\": \"\", \"remote_id\": 6, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 6,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T22:42:43"
+                                "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -114,7 +114,7 @@
                             "datasource_id": 3,
                             "id": 7,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T22:42:43"
+                                "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
