@@ -1,0 +1,1023 @@
+{
+    "dashboards": [
+        {
+            "__Dashboard__": {
+                "changed_by_fk": 1,
+                "slug": null,
+                "css": "",
+                "position_json": "{\"CHART-N6cJvvq2N3\":{\"children\":[],\"id\":\"CHART-N6cJvvq2N3\",\"meta\":{\"chartId\":3,\"height\":64,\"sliceName\":\"Location clustering\",\"width\":7},\"type\":\"CHART\"},\"CHART-T514AcyE8g\":{\"children\":[],\"id\":\"CHART-T514AcyE8g\",\"meta\":{\"chartId\":4,\"height\":64,\"sliceName\":\"Transactions last 24h\",\"width\":5},\"type\":\"CHART\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-0_lq4nC7s\"],\"id\":\"GRID_ID\",\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Spending\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-0_lq4nC7s\":{\"children\":[\"CHART-N6cJvvq2N3\",\"CHART-T514AcyE8g\"],\"id\":\"ROW-0_lq4nC7s\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"}}",
+                "changed_on": {
+                    "__datetime__": "2019-04-22T15:17:14"
+                },
+                "dashboard_title": "Spending",
+                "created_by_fk": 1,
+                "json_metadata": "{\"filter_immune_slices\": [], \"timed_refresh_immune_slices\": [], \"filter_immune_slice_fields\": {}, \"expanded_slices\": {}, \"default_filters\": \"{}\", \"remote_id\": 1}",
+                "description": null,
+                "id": 1,
+                "created_on": {
+                    "__datetime__": "2019-04-22T12:35:32"
+                },
+                "slices": [
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"mapbox\", \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": \"PT1S\", \"time_range\": \"No filter\", \"all_columns_x\": \"merchant_longitude\", \"all_columns_y\": \"merchant_latitude\", \"clustering_radius\": \"40\", \"row_limit\": 10000, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_id\", \"operator\": \"IS NOT NULL\", \"comparator\": \"\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_6fts85omb3_xtj3wssor4\"}], \"groupby\": [], \"point_radius\": \"Auto\", \"point_radius_unit\": \"Pixels\", \"mapbox_label\": [], \"pandas_aggfunc\": \"sum\", \"render_while_dragging\": true, \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"global_opacity\": 1, \"mapbox_color\": \"rgb(220, 20, 60)\", \"viewport_longitude\": -0.41407309733140896, \"viewport_latitude\": 52.42527263055128, \"viewport_zoom\": 6.4321197451214935, \"remote_id\": 3, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "datasource_name": "transactions_denormalized",
+                            "datasource_id": 3,
+                            "id": 3,
+                            "changed_on": {
+                                "__datetime__": "2019-04-27T19:40:47"
+                            },
+                            "changed_by_fk": 1,
+                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "description": null,
+                            "viz_type": "mapbox",
+                            "datasource_type": "table",
+                            "slice_name": "Location clustering",
+                            "created_on": {
+                                "__datetime__": "2019-04-22T14:52:31"
+                            },
+                            "created_by_fk": 1
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"table\", \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": \"PT1S\", \"time_range\": \"Last 24 hours\", \"groupby\": [], \"metrics\": [], \"percent_metrics\": [], \"timeseries_limit_metric\": null, \"row_limit\": 250, \"include_time\": false, \"order_desc\": true, \"all_columns\": [\"created\", \"pound_amount\", \"description\"], \"order_by_cols\": [\"[\\\"created\\\", false]\"], \"adhoc_filters\": [], \"table_timestamp_format\": \"%Y-%m-%d %H:%M:%S\", \"page_length\": 0, \"include_search\": false, \"table_filter\": false, \"align_pn\": false, \"color_pn\": true, \"remote_id\": 4, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "datasource_name": "transactions_denormalized",
+                            "datasource_id": 3,
+                            "id": 4,
+                            "changed_on": {
+                                "__datetime__": "2019-04-27T19:40:47"
+                            },
+                            "changed_by_fk": 1,
+                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "description": null,
+                            "viz_type": "table",
+                            "datasource_type": "table",
+                            "slice_name": "Transactions last 24h",
+                            "created_on": {
+                                "__datetime__": "2019-04-22T15:16:25"
+                            },
+                            "created_by_fk": 1
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"histogram\", \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"all_columns_x\": [\"amount\"], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"amount\", \"operator\": \"<\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_3qb7cj2shr2_v5t51o4ltbt\"}], \"row_limit\": 10000, \"groupby\": [], \"color_scheme\": \"bnbColors\", \"link_length\": \"25\", \"x_axis_label\": \"\", \"y_axis_label\": \"\", \"global_opacity\": 1, \"normalized\": false, \"remote_id\": 5, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "datasource_name": "transactions_denormalized",
+                            "datasource_id": 3,
+                            "id": 5,
+                            "changed_on": {
+                                "__datetime__": "2019-04-27T19:40:47"
+                            },
+                            "changed_by_fk": 1,
+                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "description": null,
+                            "viz_type": "histogram",
+                            "datasource_type": "table",
+                            "slice_name": "Spend by amount",
+                            "created_on": {
+                                "__datetime__": "2019-04-27T18:53:41"
+                            },
+                            "created_by_fk": 1
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"deck_grid\", \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"spatial\": {\"type\": \"latlong\", \"latCol\": \"merchant_latitude\", \"lonCol\": \"merchant_longitude\"}, \"size\": {\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\", \"optionName\": \"_col_pound_amount\"}, \"aggregate\": \"SUM\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": false, \"label\": \"SUM(pound_amount)\", \"optionName\": \"metric_fnn28iskmre_qpbyq667ok\"}, \"row_limit\": 10000, \"filter_nulls\": true, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \">\", \"comparator\": \"-1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_5soc28pw7n9_vj5dx2mi8eq\"}, {\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \"<\", \"comparator\": \"1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_ag419y2xshq_ywxw660figg\"}], \"mapbox_style\": \"mapbox://styles/mapbox/light-v9\", \"viewport\": {\"longitude\": -0.16244289006749232, \"latitude\": 51.4955791202923, \"zoom\": 12.02660067789674, \"bearing\": 0, \"pitch\": 0, \"width\": 1191, \"height\": 794, \"altitude\": 1.5, \"maxZoom\": 20, \"minZoom\": 0, \"maxPitch\": 60, \"minPitch\": 0, \"transitionDuration\": 0, \"transitionInterpolator\": {\"propNames\": [\"longitude\", \"latitude\", \"zoom\", \"bearing\", \"pitch\"]}, \"transitionInterruption\": 1}, \"color_picker\": {\"r\": 0, \"g\": 122, \"b\": 135, \"a\": 1}, \"autozoom\": true, \"grid_size\": 50, \"extruded\": true, \"js_columns\": [], \"remote_id\": 6, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "datasource_name": "transactions_denormalized",
+                            "datasource_id": 3,
+                            "id": 6,
+                            "changed_on": {
+                                "__datetime__": "2019-04-27T19:40:47"
+                            },
+                            "changed_by_fk": 1,
+                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "description": null,
+                            "viz_type": "deck_grid",
+                            "datasource_type": "table",
+                            "slice_name": "London Spending",
+                            "created_on": {
+                                "__datetime__": "2019-04-27T19:18:17"
+                            },
+                            "created_by_fk": 1
+                        }
+                    }
+                ]
+            }
+        }
+    ],
+    "datasources": [
+        {
+            "__SqlaTable__": {
+                "perm": "[card_data].[transactions_denormalized](id:3)",
+                "id": 3,
+                "is_sqllab_view": false,
+                "table_name": "transactions_denormalized",
+                "description": "",
+                "template_params": "",
+                "main_dttm_col": "created",
+                "default_endpoint": "",
+                "created_by_fk": 1,
+                "database_id": 2,
+                "is_featured": false,
+                "changed_by_fk": 1,
+                "fetch_values_predicate": "",
+                "filter_select_enabled": true,
+                "user_id": 1,
+                "offset": 0,
+                "created_on": {
+                    "__datetime__": "2019-04-22T13:55:51"
+                },
+                "schema": "",
+                "cache_timeout": null,
+                "changed_on": {
+                    "__datetime__": "2019-04-22T13:56:28"
+                },
+                "sql": "",
+                "params": "{\"remote_id\": 3, \"database_name\": \"card_data\"}",
+                "database": {
+                    "__Database__": {
+                        "changed_on": {
+                            "__datetime__": "2019-04-22T12:30:35"
+                        },
+                        "extra": "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {},\r\n    \"metadata_cache_timeout\": {},\r\n    \"schemas_allowed_for_csv_upload\": []\r\n}\r\n",
+                        "expose_in_sqllab": true,
+                        "id": 2,
+                        "perm": "[card_data].(id:2)",
+                        "allow_run_sync": true,
+                        "verbose_name": null,
+                        "impersonate_user": false,
+                        "allow_run_async": true,
+                        "database_name": "card_data",
+                        "created_by_fk": null,
+                        "allow_csv_upload": false,
+                        "sqlalchemy_uri": "postgresql+psycopg2:///superset_data",
+                        "changed_by_fk": null,
+                        "allow_ctas": false,
+                        "password": null,
+                        "allow_dml": false,
+                        "cache_timeout": null,
+                        "force_ctas_schema": null,
+                        "select_as_create_table_as": false,
+                        "created_on": {
+                            "__datetime__": "2019-04-22T12:30:34"
+                        },
+                        "allow_multi_schema_metadata_fetch": true
+                    }
+                },
+                "columns": [
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 24,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "id",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 25,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "description",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": true,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 26,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "created",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": true,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 27,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "settled",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "TIMESTAMP WITHOUT TIME ZONE",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": true,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 28,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "updated",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "INTEGER",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": true,
+                            "id": 29,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": true,
+                            "column_name": "amount",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 30,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "currency",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "BOOLEAN",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 31,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "include_in_spending",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 32,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_id",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 33,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_name",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 34,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_category",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 35,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_logo",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "DOUBLE PRECISION",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": true,
+                            "id": 36,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": true,
+                            "column_name": "merchant_latitude",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "DOUBLE PRECISION",
+                            "table_id": 3,
+                            "groupby": false,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": true,
+                            "id": 37,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": true,
+                            "column_name": "merchant_longitude",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": false
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 38,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_postcode",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 39,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_city",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 40,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_region",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 41,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_country",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "VARCHAR",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 42,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_address",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": "",
+                            "type": "",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T15:08:31"
+                            },
+                            "expression": "amount / 100",
+                            "sum": false,
+                            "id": 68,
+                            "python_date_format": "",
+                            "created_on": {
+                                "__datetime__": "2019-04-22T15:08:31"
+                            },
+                            "avg": false,
+                            "column_name": "pound_amount",
+                            "database_expression": "",
+                            "max": false,
+                            "verbose_name": "Amount in \u00a3",
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "BOOLEAN",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T15:09:04"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 44,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_online",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "BOOLEAN",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T15:09:03"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 43,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_approximate",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    },
+                    {
+                        "__TableColumn__": {
+                            "description": null,
+                            "type": "BOOLEAN",
+                            "table_id": 3,
+                            "groupby": true,
+                            "is_dttm": false,
+                            "count_distinct": false,
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T15:09:04"
+                            },
+                            "expression": "",
+                            "sum": false,
+                            "id": 45,
+                            "python_date_format": null,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "avg": false,
+                            "column_name": "merchant_atm",
+                            "database_expression": null,
+                            "max": false,
+                            "verbose_name": null,
+                            "created_by_fk": 1,
+                            "min": false,
+                            "is_active": true,
+                            "changed_by_fk": 1,
+                            "filterable": true
+                        }
+                    }
+                ],
+                "metrics": [
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": null,
+                            "id": 9,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "SUM(amount)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "sum",
+                            "metric_name": "sum__amount",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": null,
+                            "id": 10,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "AVG(amount)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "avg",
+                            "metric_name": "avg__amount",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": null,
+                            "id": 11,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "SUM(merchant_latitude)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "sum",
+                            "metric_name": "sum__merchant_latitude",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": null,
+                            "id": 12,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "AVG(merchant_latitude)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "avg",
+                            "metric_name": "avg__merchant_latitude",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": null,
+                            "id": 13,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "SUM(merchant_longitude)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "sum",
+                            "metric_name": "sum__merchant_longitude",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": null,
+                            "id": 14,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "AVG(merchant_longitude)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "avg",
+                            "metric_name": "avg__merchant_longitude",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    },
+                    {
+                        "__SqlMetric__": {
+                            "d3format": null,
+                            "description": null,
+                            "verbose_name": "COUNT(*)",
+                            "id": 15,
+                            "created_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "changed_by_fk": 1,
+                            "expression": "COUNT(*)",
+                            "warning_text": null,
+                            "is_restricted": false,
+                            "metric_type": "count",
+                            "metric_name": "count",
+                            "changed_on": {
+                                "__datetime__": "2019-04-22T13:55:51"
+                            },
+                            "created_by_fk": 1,
+                            "table_id": 3
+                        }
+                    }
+                ]
+            }
+        }
+    ]
+}
