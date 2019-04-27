@@ -5,9 +5,9 @@
                 "changed_by_fk": 1,
                 "slug": null,
                 "css": "",
-                "position_json": "{\"CHART-CtiJFD2PY0\":{\"children\":[],\"id\":\"CHART-CtiJFD2PY0\",\"meta\":{\"chartId\":5,\"height\":40,\"sliceName\":\"Spend by amount\",\"width\":8},\"type\":\"CHART\"},\"CHART-N6cJvvq2N3\":{\"children\":[],\"id\":\"CHART-N6cJvvq2N3\",\"meta\":{\"chartId\":3,\"height\":101,\"sliceName\":\"Location clustering\",\"width\":4},\"type\":\"CHART\"},\"CHART-StlcJVYPhl\":{\"children\":[],\"id\":\"CHART-StlcJVYPhl\",\"meta\":{\"chartId\":6,\"height\":59,\"sliceName\":\"London Spending\",\"width\":8},\"type\":\"CHART\"},\"CHART-T514AcyE8g\":{\"children\":[],\"id\":\"CHART-T514AcyE8g\",\"meta\":{\"chartId\":4,\"height\":60,\"sliceName\":\"Transactions last 24h\",\"width\":4},\"type\":\"CHART\"},\"COLUMN-5P4MnimA0J\":{\"children\":[\"CHART-N6cJvvq2N3\"],\"id\":\"COLUMN-5P4MnimA0J\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"width\":4},\"type\":\"COLUMN\"},\"COLUMN-TQEsCU84oj\":{\"children\":[\"ROW-_vqRT35cmT\",\"ROW-OuMLJKKRDW\"],\"id\":\"COLUMN-TQEsCU84oj\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"width\":8},\"type\":\"COLUMN\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-_hC2l6pwlx\",\"ROW-6cNA4Tg0j\"],\"id\":\"GRID_ID\",\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Spending\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-6cNA4Tg0j\":{\"children\":[\"CHART-T514AcyE8g\"],\"id\":\"ROW-6cNA4Tg0j\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"},\"ROW-OuMLJKKRDW\":{\"children\":[\"CHART-CtiJFD2PY0\"],\"id\":\"ROW-OuMLJKKRDW\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"},\"ROW-_hC2l6pwlx\":{\"children\":[\"COLUMN-TQEsCU84oj\",\"COLUMN-5P4MnimA0J\"],\"id\":\"ROW-_hC2l6pwlx\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"},\"ROW-_vqRT35cmT\":{\"children\":[\"CHART-StlcJVYPhl\"],\"id\":\"ROW-_vqRT35cmT\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"}}",
+                "position_json": "{\"CHART-CtiJFD2PY0\":{\"children\":[],\"id\":\"CHART-CtiJFD2PY0\",\"meta\":{\"chartId\":5,\"height\":40,\"sliceName\":\"Spend by amount\",\"width\":8},\"type\":\"CHART\"},\"CHART-N6cJvvq2N3\":{\"children\":[],\"id\":\"CHART-N6cJvvq2N3\",\"meta\":{\"chartId\":3,\"height\":101,\"sliceName\":\"Location clustering\",\"width\":4},\"type\":\"CHART\"},\"CHART-NWEd5JpyAF\":{\"children\":[],\"id\":\"CHART-NWEd5JpyAF\",\"meta\":{\"chartId\":7,\"height\":64,\"sliceName\":\"Spend by day\",\"width\":8},\"type\":\"CHART\"},\"CHART-StlcJVYPhl\":{\"children\":[],\"id\":\"CHART-StlcJVYPhl\",\"meta\":{\"chartId\":6,\"height\":59,\"sliceName\":\"London Spending\",\"width\":8},\"type\":\"CHART\"},\"CHART-T514AcyE8g\":{\"children\":[],\"id\":\"CHART-T514AcyE8g\",\"meta\":{\"chartId\":4,\"height\":60,\"sliceName\":\"Transactions last 24h\",\"width\":4},\"type\":\"CHART\"},\"COLUMN-5P4MnimA0J\":{\"children\":[\"CHART-N6cJvvq2N3\"],\"id\":\"COLUMN-5P4MnimA0J\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"width\":4},\"type\":\"COLUMN\"},\"COLUMN-TQEsCU84oj\":{\"children\":[\"ROW-_vqRT35cmT\",\"ROW-OuMLJKKRDW\"],\"id\":\"COLUMN-TQEsCU84oj\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\",\"width\":8},\"type\":\"COLUMN\"},\"DASHBOARD_VERSION_KEY\":\"v2\",\"GRID_ID\":{\"children\":[\"ROW-_hC2l6pwlx\",\"ROW-6cNA4Tg0j\"],\"id\":\"GRID_ID\",\"type\":\"GRID\"},\"HEADER_ID\":{\"id\":\"HEADER_ID\",\"meta\":{\"text\":\"Spending\"},\"type\":\"HEADER\"},\"ROOT_ID\":{\"children\":[\"GRID_ID\"],\"id\":\"ROOT_ID\",\"type\":\"ROOT\"},\"ROW-6cNA4Tg0j\":{\"children\":[\"CHART-NWEd5JpyAF\",\"CHART-T514AcyE8g\"],\"id\":\"ROW-6cNA4Tg0j\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"},\"ROW-OuMLJKKRDW\":{\"children\":[\"CHART-CtiJFD2PY0\"],\"id\":\"ROW-OuMLJKKRDW\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"},\"ROW-_hC2l6pwlx\":{\"children\":[\"COLUMN-TQEsCU84oj\",\"COLUMN-5P4MnimA0J\"],\"id\":\"ROW-_hC2l6pwlx\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"},\"ROW-_vqRT35cmT\":{\"children\":[\"CHART-StlcJVYPhl\"],\"id\":\"ROW-_vqRT35cmT\",\"meta\":{\"background\":\"BACKGROUND_TRANSPARENT\"},\"type\":\"ROW\"}}",
                 "changed_on": {
-                    "__datetime__": "2019-04-27T21:32:09"
+                    "__datetime__": "2019-04-27T22:33:14"
                 },
                 "dashboard_title": "Spending",
                 "created_by_fk": 1,
@@ -26,7 +26,7 @@
                             "datasource_id": 3,
                             "id": 3,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T21:33:10"
+                                "__datetime__": "2019-04-27T22:42:43"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -48,7 +48,7 @@
                             "datasource_id": 3,
                             "id": 4,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T21:33:10"
+                                "__datetime__": "2019-04-27T22:42:43"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -65,19 +65,19 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"histogram\", \"slice_id\": 5, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"all_columns_x\": [\"pound_amount\"], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_1pgpetjzatf_jk7au1wc04c\"}], \"row_limit\": 10000, \"groupby\": [], \"color_scheme\": \"bnbColors\", \"link_length\": \"25\", \"x_axis_label\": \"\", \"y_axis_label\": \"\", \"global_opacity\": 1, \"normalized\": false, \"remote_id\": 5, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"histogram\", \"slice_id\": 5, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"Last month\", \"all_columns_x\": [\"pound_amount\"], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_1pgpetjzatf_jk7au1wc04c\"}], \"row_limit\": 10000, \"groupby\": [], \"color_scheme\": \"bnbColors\", \"link_length\": \"25\", \"x_axis_label\": \"\", \"y_axis_label\": \"\", \"global_opacity\": 1, \"normalized\": false, \"remote_id\": 5, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 5,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T21:33:10"
+                                "__datetime__": "2019-04-27T22:42:43"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
-                            "description": null,
+                            "description": "",
                             "viz_type": "histogram",
                             "datasource_type": "table",
-                            "slice_name": "Spend by amount",
+                            "slice_name": "Spend by amount (Last Month)",
                             "created_on": {
                                 "__datetime__": "2019-04-27T18:53:41"
                             },
@@ -92,7 +92,7 @@
                             "datasource_id": 3,
                             "id": 6,
                             "changed_on": {
-                                "__datetime__": "2019-04-27T21:33:10"
+                                "__datetime__": "2019-04-27T22:42:43"
                             },
                             "changed_by_fk": 1,
                             "perm": "[card_data].[transactions_denormalized](id:3)",
@@ -102,6 +102,28 @@
                             "slice_name": "London Spending",
                             "created_on": {
                                 "__datetime__": "2019-04-27T19:18:17"
+                            },
+                            "created_by_fk": 1
+                        }
+                    },
+                    {
+                        "__Slice__": {
+                            "cache_timeout": null,
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"line\", \"slice_id\": 7, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"Last month\", \"metrics\": [{\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"-amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\", \"optionName\": \"_col_pound_amount\"}, \"aggregate\": \"AVG\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"AVG(pound_amount)\", \"optionName\": \"metric_tl8e4fscsnc_1tjk1rb5zsf\"}], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_va0aoellfxf_ebw2z8mqg06\"}], \"groupby\": [], \"limit\": null, \"timeseries_limit_metric\": null, \"order_desc\": true, \"contribution\": false, \"row_limit\": 10000, \"color_scheme\": \"bnbColors\", \"show_brush\": \"auto\", \"send_time_range\": false, \"show_legend\": true, \"rich_tooltip\": true, \"show_markers\": true, \"line_interpolation\": \"cardinal\", \"x_axis_label\": \"\", \"bottom_margin\": \"auto\", \"x_ticks_layout\": \"auto\", \"x_axis_format\": \"smart_date\", \"x_axis_showminmax\": false, \"y_axis_label\": \"\", \"left_margin\": \"auto\", \"y_axis_showminmax\": false, \"y_log_scale\": false, \"y_axis_format\": \".3s\", \"y_axis_bounds\": [null, null], \"rolling_type\": null, \"rolling_periods\": \"\", \"min_periods\": \"\", \"time_compare\": [], \"comparison_type\": null, \"resample_how\": \"sum\", \"resample_rule\": \"1D\", \"resample_fillmethod\": \"ffill\", \"annotation_layers\": [], \"remote_id\": 7, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "datasource_name": "transactions_denormalized",
+                            "datasource_id": 3,
+                            "id": 7,
+                            "changed_on": {
+                                "__datetime__": "2019-04-27T22:42:43"
+                            },
+                            "changed_by_fk": 1,
+                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "description": null,
+                            "viz_type": "line",
+                            "datasource_type": "table",
+                            "slice_name": "Spend by day (Last Month)",
+                            "created_on": {
+                                "__datetime__": "2019-04-27T22:32:48"
                             },
                             "created_by_fk": 1
                         }
