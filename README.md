@@ -1,5 +1,5 @@
 # Viz Experiment with Superset
 
-description
+Play around with Apache Superset to visualise my spending
 
 
