@@ -42,3 +42,8 @@ if __name__ == "__main__":
         import_data(update_cache=False)
         session = get_session()
         print(session.query(Transaction.id).count())
+
+    if "update_data" in argv:
+        import_data(update_cache=True)
+        session = get_session()
+        print(session.query(Transaction.id).count())

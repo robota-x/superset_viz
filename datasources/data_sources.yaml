@@ -1,346 +1,346 @@
-- allow_run_async: true
-  database_name: card_data
-  expose_in_sqllab: true
-  extra: "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {},\r\n    \"\
-    metadata_cache_timeout\": {},\r\n    \"schemas_allowed_for_csv_upload\": []\r\n\
-    }\r\n"
-  sqlalchemy_uri: postgresql+psycopg2:///superset_data
-  tables:
-  - columns:
-    - column_name: id
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: name
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: category
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: logo
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - avg: true
-      column_name: latitude
-      sum: true
-      type: DOUBLE PRECISION
-    - avg: true
-      column_name: longitude
-      sum: true
-      type: DOUBLE PRECISION
-    - column_name: postcode
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: city
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: region
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: country
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: address
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: approximate
-      type: BOOLEAN
-    - column_name: online
-      type: BOOLEAN
-    - column_name: atm
-      type: BOOLEAN
-    metrics:
-    - expression: SUM(latitude)
-      metric_name: sum__latitude
-      metric_type: sum
-    - expression: AVG(latitude)
-      metric_name: avg__latitude
-      metric_type: avg
-    - expression: SUM(longitude)
-      metric_name: sum__longitude
-      metric_type: sum
-    - expression: AVG(longitude)
-      metric_name: avg__longitude
-      metric_type: avg
-    - expression: COUNT(*)
-      metric_name: count
-      metric_type: count
-      verbose_name: COUNT(*)
-    schema: ''
-    table_name: merchants
-  - columns:
-    - column_name: id
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: description
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: created
-      is_dttm: true
-      type: TIMESTAMP WITHOUT TIME ZONE
-    - column_name: settled
-      is_dttm: true
-      type: TIMESTAMP WITHOUT TIME ZONE
-    - column_name: updated
-      is_dttm: true
-      type: TIMESTAMP WITHOUT TIME ZONE
-    - avg: true
-      column_name: amount
-      sum: true
-      type: INTEGER
-    - column_name: currency
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: include_in_spending
-      type: BOOLEAN
-    - column_name: merchant_id
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    main_dttm_col: created
-    metrics:
-    - expression: SUM(amount)
-      metric_name: sum__amount
-      metric_type: sum
-    - expression: AVG(amount)
-      metric_name: avg__amount
-      metric_type: avg
-    - expression: COUNT(*)
-      metric_name: count
-      metric_type: count
-      verbose_name: COUNT(*)
-    schema: ''
-    table_name: transactions
-  - columns:
-    - column_name: id
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: description
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: created
-      is_dttm: true
-      type: TIMESTAMP WITHOUT TIME ZONE
-    - column_name: settled
-      is_dttm: true
-      type: TIMESTAMP WITHOUT TIME ZONE
-    - column_name: updated
-      is_dttm: true
-      type: TIMESTAMP WITHOUT TIME ZONE
-    - avg: true
-      column_name: amount
-      sum: true
-      type: INTEGER
-    - column_name: currency
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: include_in_spending
-      type: BOOLEAN
-    - column_name: merchant_id
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_name
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_category
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_logo
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - avg: true
-      column_name: merchant_latitude
-      sum: true
-      type: DOUBLE PRECISION
-    - avg: true
-      column_name: merchant_longitude
-      sum: true
-      type: DOUBLE PRECISION
-    - column_name: merchant_postcode
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_city
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_region
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_country
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_address
-      filterable: true
-      groupby: true
-      type: VARCHAR
-    - column_name: merchant_online
-      filterable: true
-      groupby: true
-      type: BOOLEAN
-    - column_name: merchant_approximate
-      filterable: true
-      groupby: true
-      type: BOOLEAN
-    - column_name: merchant_atm
-      filterable: true
-      groupby: true
-      type: BOOLEAN
-    - column_name: pound_amount
-      database_expression: ''
-      description: ''
-      expression: -amount / 100
-      filterable: true
-      groupby: true
-      python_date_format: ''
-      type: ''
-      verbose_name: "Amount in \xA3"
-    default_endpoint: ''
+allow_run_async: true
+database_name: card_data
+expose_in_sqllab: true
+extra: "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {},\r\n    \"\
+  metadata_cache_timeout\": {},\r\n    \"schemas_allowed_for_csv_upload\": []\r\n\
+  }\r\n"
+sqlalchemy_uri: postgresql+psycopg2:///superset_data
+tables:
+- columns:
+  - column_name: id
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: name
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: category
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: logo
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - avg: true
+    column_name: latitude
+    sum: true
+    type: DOUBLE PRECISION
+  - avg: true
+    column_name: longitude
+    sum: true
+    type: DOUBLE PRECISION
+  - column_name: postcode
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: city
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: region
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: country
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: address
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: approximate
+    type: BOOLEAN
+  - column_name: online
+    type: BOOLEAN
+  - column_name: atm
+    type: BOOLEAN
+  metrics:
+  - expression: SUM(latitude)
+    metric_name: sum__latitude
+    metric_type: sum
+  - expression: AVG(latitude)
+    metric_name: avg__latitude
+    metric_type: avg
+  - expression: SUM(longitude)
+    metric_name: sum__longitude
+    metric_type: sum
+  - expression: AVG(longitude)
+    metric_name: avg__longitude
+    metric_type: avg
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: ''
+  table_name: merchants
+- columns:
+  - column_name: id
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: description
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: created
+    is_dttm: true
+    type: TIMESTAMP WITHOUT TIME ZONE
+  - column_name: settled
+    is_dttm: true
+    type: TIMESTAMP WITHOUT TIME ZONE
+  - column_name: updated
+    is_dttm: true
+    type: TIMESTAMP WITHOUT TIME ZONE
+  - avg: true
+    column_name: amount
+    sum: true
+    type: INTEGER
+  - column_name: currency
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: include_in_spending
+    type: BOOLEAN
+  - column_name: merchant_id
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  main_dttm_col: created
+  metrics:
+  - expression: SUM(amount)
+    metric_name: sum__amount
+    metric_type: sum
+  - expression: AVG(amount)
+    metric_name: avg__amount
+    metric_type: avg
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: ''
+  table_name: transactions
+- columns:
+  - column_name: id
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: description
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: created
+    is_dttm: true
+    type: TIMESTAMP WITHOUT TIME ZONE
+  - column_name: settled
+    is_dttm: true
+    type: TIMESTAMP WITHOUT TIME ZONE
+  - column_name: updated
+    is_dttm: true
+    type: TIMESTAMP WITHOUT TIME ZONE
+  - avg: true
+    column_name: amount
+    sum: true
+    type: INTEGER
+  - column_name: currency
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: include_in_spending
+    type: BOOLEAN
+  - column_name: merchant_id
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_name
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_category
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_logo
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - avg: true
+    column_name: merchant_latitude
+    sum: true
+    type: DOUBLE PRECISION
+  - avg: true
+    column_name: merchant_longitude
+    sum: true
+    type: DOUBLE PRECISION
+  - column_name: merchant_postcode
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_city
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_region
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_country
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_address
+    filterable: true
+    groupby: true
+    type: VARCHAR
+  - column_name: merchant_online
+    filterable: true
+    groupby: true
+    type: BOOLEAN
+  - column_name: merchant_approximate
+    filterable: true
+    groupby: true
+    type: BOOLEAN
+  - column_name: merchant_atm
+    filterable: true
+    groupby: true
+    type: BOOLEAN
+  - column_name: pound_amount
+    database_expression: ''
     description: ''
-    filter_select_enabled: true
-    main_dttm_col: created
-    metrics:
-    - expression: SUM(amount)
-      metric_name: sum__amount
-      metric_type: sum
-    - expression: AVG(amount)
-      metric_name: avg__amount
-      metric_type: avg
-    - expression: SUM(merchant_latitude)
-      metric_name: sum__merchant_latitude
-      metric_type: sum
-    - expression: AVG(merchant_latitude)
-      metric_name: avg__merchant_latitude
-      metric_type: avg
-    - expression: SUM(merchant_longitude)
-      metric_name: sum__merchant_longitude
-      metric_type: sum
-    - expression: AVG(merchant_longitude)
-      metric_name: avg__merchant_longitude
-      metric_type: avg
-    - expression: COUNT(*)
-      metric_name: count
-      metric_type: count
-      verbose_name: COUNT(*)
-    schema: ''
-    sql: ''
-    table_name: transactions_denormalized
-    template_params: ''
-  - columns:
-    - column_name: id
-      filterable: true
-      groupby: true
-      type: STRING
-    - column_name: description
-      filterable: true
-      groupby: true
-      type: STRING
-    - column_name: created
-      filterable: true
-      groupby: true
-      is_dttm: true
-      type: DATETIME
-    - column_name: settled
-      filterable: true
-      groupby: true
-      is_dttm: true
-      type: DATETIME
-    - column_name: updated
-      filterable: true
-      groupby: true
-      is_dttm: true
-      type: DATETIME
-    - column_name: amount
-      filterable: true
-      groupby: true
-      type: INT
-    - column_name: currency
-      filterable: true
-      groupby: true
-      type: STRING
-    - column_name: include_in_spending
-      filterable: true
-      groupby: true
-    - column_name: merchant_id
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_name
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_category
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_logo
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_latitude
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_longitude
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_postcode
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_city
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_region
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_country
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_address
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_approximate
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_online
-      filterable: true
-      groupby: true
-      type: OBJECT
-    - column_name: merchant_atm
-      filterable: true
-      groupby: true
-      type: OBJECT
-    metrics:
-    - expression: count(*)
-      metric_name: count
-    schema: public
-    sql: select * from transactions_denormalized
-    table_name: admin user-Untitled Query-6HHbKyBYB
-    template_params: '{}'
+    expression: -amount / 100
+    filterable: true
+    groupby: true
+    python_date_format: ''
+    type: ''
+    verbose_name: "Amount in \xA3"
+  default_endpoint: ''
+  description: ''
+  filter_select_enabled: true
+  main_dttm_col: created
+  metrics:
+  - expression: SUM(amount)
+    metric_name: sum__amount
+    metric_type: sum
+  - expression: AVG(amount)
+    metric_name: avg__amount
+    metric_type: avg
+  - expression: SUM(merchant_latitude)
+    metric_name: sum__merchant_latitude
+    metric_type: sum
+  - expression: AVG(merchant_latitude)
+    metric_name: avg__merchant_latitude
+    metric_type: avg
+  - expression: SUM(merchant_longitude)
+    metric_name: sum__merchant_longitude
+    metric_type: sum
+  - expression: AVG(merchant_longitude)
+    metric_name: avg__merchant_longitude
+    metric_type: avg
+  - expression: COUNT(*)
+    metric_name: count
+    metric_type: count
+    verbose_name: COUNT(*)
+  schema: ''
+  sql: ''
+  table_name: transactions_denormalized
+  template_params: ''
+- columns:
+  - column_name: id
+    filterable: true
+    groupby: true
+    type: STRING
+  - column_name: description
+    filterable: true
+    groupby: true
+    type: STRING
+  - column_name: created
+    filterable: true
+    groupby: true
+    is_dttm: true
+    type: DATETIME
+  - column_name: settled
+    filterable: true
+    groupby: true
+    is_dttm: true
+    type: DATETIME
+  - column_name: updated
+    filterable: true
+    groupby: true
+    is_dttm: true
+    type: DATETIME
+  - column_name: amount
+    filterable: true
+    groupby: true
+    type: INT
+  - column_name: currency
+    filterable: true
+    groupby: true
+    type: STRING
+  - column_name: include_in_spending
+    filterable: true
+    groupby: true
+  - column_name: merchant_id
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_name
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_category
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_logo
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_latitude
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_longitude
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_postcode
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_city
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_region
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_country
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_address
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_approximate
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_online
+    filterable: true
+    groupby: true
+    type: OBJECT
+  - column_name: merchant_atm
+    filterable: true
+    groupby: true
+    type: OBJECT
+  metrics:
+  - expression: count(*)
+    metric_name: count
+  schema: public
+  sql: select * from transactions_denormalized
+  table_name: admin user-Untitled Query-6HHbKyBYB
+  template_params: '{}'
