@@ -12,15 +12,20 @@ Comes with a small python script to import data from Monzo APIs and save it in a
 
 ## Installation
 
+* run `bash setup_initial.sh`. This will create a virtualenv, install the requirements and create a config file
+* fill in the data in the `config.ini` file.
+    - to obtain credentials for Monzo, visit [the dev playground](developers.monzo.com/api/playground) and login
+    - the database location is in sqlalchemy format, for example `postgresql+psycopg2:///superset` connects to psql with no user/pwd and uses the DBs `superset_main` and `superset_data`
+    - (optional, if you use map format) login into mapbox and get your public token [here](https://account.mapbox.com/access-tokens/)
+* create the empty DBs manually
+* run `bash setup_final.sh` to update the db schema, import the transactions from Monzo and import the dashboard/data sources in Superset. You will have to enter some data to setup a login
 
-env
-requirements
-login oauth
-create config.ini and copy
-db creation
-run commands to import stuff (add dashboard import!)
 
 ## Usage
+* ensure your virtual env is active (`source venv/bin/activate`)
+* run `bash startup.sh` to spin up the dev server on localhost (defaults to port 8088)
+* dashboards and data source should already be configured
+* (optional) running `superset import ` TODO improt some base examples and data from superset itself.
 
 # Architecture
 

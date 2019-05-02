@@ -34,8 +34,11 @@ def import_data(update_cache=False):
 
 
 if __name__ == "__main__":
-    # write_models()
-
-    import_data(update_cache=False)
-    session = get_session()
-    print(session.query(Transaction.id).count())
+    if "write_models" in argv:
+        write_models()
+        print("model created in database!")
+    
+    if "import_data" in argv:
+        import_data(update_cache=False)
+        session = get_session()
+        print(session.query(Transaction.id).count())
