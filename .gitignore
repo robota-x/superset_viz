@@ -1,4 +1,4 @@
-env
+venv
 .py[cod]
 config.ini
 data

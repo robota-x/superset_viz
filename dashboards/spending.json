@@ -21,7 +21,7 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"mapbox\", \"slice_id\": 3, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": \"PT1S\", \"time_range\": \"No filter\", \"all_columns_x\": \"merchant_longitude\", \"all_columns_y\": \"merchant_latitude\", \"clustering_radius\": \"40\", \"row_limit\": 10000, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_id\", \"operator\": \"IS NOT NULL\", \"comparator\": \"\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_6fts85omb3_xtj3wssor4\"}], \"groupby\": [], \"point_radius\": \"Auto\", \"point_radius_unit\": \"Pixels\", \"mapbox_label\": [], \"pandas_aggfunc\": \"sum\", \"render_while_dragging\": true, \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"global_opacity\": 1, \"mapbox_color\": \"rgb(0, 139, 139)\", \"viewport_longitude\": 0.43240943002140736, \"viewport_latitude\": 52.33187737180185, \"viewport_zoom\": 6.575935980233167, \"remote_id\": 3, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"mapbox\", \"slice_id\": 3, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": \"PT1S\", \"time_range\": \"No filter\", \"all_columns_x\": \"merchant_longitude\", \"all_columns_y\": \"merchant_latitude\", \"clustering_radius\": \"40\", \"row_limit\": 10000, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_id\", \"operator\": \"IS NOT NULL\", \"comparator\": \"\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_6fts85omb3_xtj3wssor4\"}], \"groupby\": [], \"point_radius\": \"Auto\", \"point_radius_unit\": \"Pixels\", \"mapbox_label\": [], \"pandas_aggfunc\": \"sum\", \"render_while_dragging\": true, \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"global_opacity\": 1, \"mapbox_color\": \"rgb(0, 139, 139)\", \"viewport_longitude\": 0.43240943002140736, \"viewport_latitude\": 52.33187737180185, \"viewport_zoom\": 6.575935980233167, \"remote_id\": 3, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"main\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 3,
@@ -29,7 +29,7 @@
                                 "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
-                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "perm": "[main].[transactions_denormalized](id:3)",
                             "description": null,
                             "viz_type": "mapbox",
                             "datasource_type": "table",
@@ -43,7 +43,7 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"table\", \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": \"PT1S\", \"time_range\": \"Last 24 hours\", \"groupby\": [], \"metrics\": [], \"percent_metrics\": [], \"timeseries_limit_metric\": null, \"row_limit\": 250, \"include_time\": false, \"order_desc\": true, \"all_columns\": [\"created\", \"pound_amount\", \"description\"], \"order_by_cols\": [\"[\\\"created\\\", false]\"], \"adhoc_filters\": [], \"table_timestamp_format\": \"%Y-%m-%d %H:%M:%S\", \"page_length\": 0, \"include_search\": false, \"table_filter\": false, \"align_pn\": false, \"color_pn\": true, \"remote_id\": 4, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"table\", \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": \"PT1S\", \"time_range\": \"Last 24 hours\", \"groupby\": [], \"metrics\": [], \"percent_metrics\": [], \"timeseries_limit_metric\": null, \"row_limit\": 250, \"include_time\": false, \"order_desc\": true, \"all_columns\": [\"created\", \"pound_amount\", \"description\"], \"order_by_cols\": [\"[\\\"created\\\", false]\"], \"adhoc_filters\": [], \"table_timestamp_format\": \"%Y-%m-%d %H:%M:%S\", \"page_length\": 0, \"include_search\": false, \"table_filter\": false, \"align_pn\": false, \"color_pn\": true, \"remote_id\": 4, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"main\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 4,
@@ -51,7 +51,7 @@
                                 "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
-                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "perm": "[main].[transactions_denormalized](id:3)",
                             "description": null,
                             "viz_type": "table",
                             "datasource_type": "table",
@@ -65,7 +65,7 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"histogram\", \"slice_id\": 5, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"Last month\", \"all_columns_x\": [\"pound_amount\"], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_1pgpetjzatf_jk7au1wc04c\"}], \"row_limit\": 10000, \"groupby\": [], \"color_scheme\": \"bnbColors\", \"link_length\": \"25\", \"x_axis_label\": \"\", \"y_axis_label\": \"\", \"global_opacity\": 1, \"normalized\": false, \"remote_id\": 5, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"histogram\", \"slice_id\": 5, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"Last month\", \"all_columns_x\": [\"pound_amount\"], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_1pgpetjzatf_jk7au1wc04c\"}], \"row_limit\": 10000, \"groupby\": [], \"color_scheme\": \"bnbColors\", \"link_length\": \"25\", \"x_axis_label\": \"\", \"y_axis_label\": \"\", \"global_opacity\": 1, \"normalized\": false, \"remote_id\": 5, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"main\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 5,
@@ -73,7 +73,7 @@
                                 "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
-                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "perm": "[main].[transactions_denormalized](id:3)",
                             "description": "",
                             "viz_type": "histogram",
                             "datasource_type": "table",
@@ -87,7 +87,7 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"deck_hex\", \"slice_id\": 6, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"spatial\": {\"type\": \"latlong\", \"latCol\": \"merchant_latitude\", \"lonCol\": \"merchant_longitude\"}, \"size\": {\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\"}, \"aggregate\": \"SUM\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"SUM(pound_amount)\", \"optionName\": \"metric_fnn28iskmre_qpbyq667ok\"}, \"row_limit\": 50000, \"filter_nulls\": true, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \">\", \"comparator\": \"-1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_5soc28pw7n9_vj5dx2mi8eq\"}, {\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \"<\", \"comparator\": \"1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_ag419y2xshq_ywxw660figg\"}], \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"viewport\": {\"longitude\": -0.16230716196405043, \"latitude\": 51.5150446957785, \"zoom\": 11.877240559099267, \"bearing\": 0, \"pitch\": 35, \"width\": 1191, \"height\": 794, \"altitude\": 1.5, \"maxZoom\": 20, \"minZoom\": 0, \"maxPitch\": 60, \"minPitch\": 0, \"transitionDuration\": 0, \"transitionInterpolator\": {\"propNames\": [\"longitude\", \"latitude\", \"zoom\", \"bearing\", \"pitch\"]}, \"transitionInterruption\": 1}, \"color_picker\": {\"r\": 0, \"g\": 122, \"b\": 135, \"a\": 1}, \"autozoom\": true, \"grid_size\": 50, \"extruded\": true, \"js_columns\": [\"merchant_name\", \"pound_amount\"], \"js_data_mutator\": \"\", \"js_tooltip\": \"info => {\\n  const places = info.object.points.reduce((acc, val) => {\\n    const { merchant_name, pound_amount } = val.extraProps;\\n    acc[merchant_name] = (acc[merchant_name] || 0) + pound_amount;\\n    return acc;\\n  }, {});\\n  return Object.keys(places).map(key => `${key}: ${places[key]}\\u00a3`).join(\\\" | \\\");\\n}\", \"js_onclick_href\": \"\", \"remote_id\": 6, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"deck_hex\", \"slice_id\": 6, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"No filter\", \"spatial\": {\"type\": \"latlong\", \"latCol\": \"merchant_latitude\", \"lonCol\": \"merchant_longitude\"}, \"size\": {\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\"}, \"aggregate\": \"SUM\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"SUM(pound_amount)\", \"optionName\": \"metric_fnn28iskmre_qpbyq667ok\"}, \"row_limit\": 50000, \"filter_nulls\": true, \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \">\", \"comparator\": \"-1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_5soc28pw7n9_vj5dx2mi8eq\"}, {\"expressionType\": \"SIMPLE\", \"subject\": \"merchant_longitude\", \"operator\": \"<\", \"comparator\": \"1\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_ag419y2xshq_ywxw660figg\"}], \"mapbox_style\": \"mapbox://styles/mapbox/dark-v9\", \"viewport\": {\"longitude\": -0.16230716196405043, \"latitude\": 51.5150446957785, \"zoom\": 11.877240559099267, \"bearing\": 0, \"pitch\": 35, \"width\": 1191, \"height\": 794, \"altitude\": 1.5, \"maxZoom\": 20, \"minZoom\": 0, \"maxPitch\": 60, \"minPitch\": 0, \"transitionDuration\": 0, \"transitionInterpolator\": {\"propNames\": [\"longitude\", \"latitude\", \"zoom\", \"bearing\", \"pitch\"]}, \"transitionInterruption\": 1}, \"color_picker\": {\"r\": 0, \"g\": 122, \"b\": 135, \"a\": 1}, \"autozoom\": true, \"grid_size\": 50, \"extruded\": true, \"js_columns\": [\"merchant_name\", \"pound_amount\"], \"js_data_mutator\": \"\", \"js_tooltip\": \"info => {\\n  const places = info.object.points.reduce((acc, val) => {\\n    const { merchant_name, pound_amount } = val.extraProps;\\n    acc[merchant_name] = (acc[merchant_name] || 0) + pound_amount;\\n    return acc;\\n  }, {});\\n  return Object.keys(places).map(key => `${key}: ${places[key]}\\u00a3`).join(\\\" | \\\");\\n}\", \"js_onclick_href\": \"\", \"remote_id\": 6, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"main\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 6,
@@ -95,7 +95,7 @@
                                 "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
-                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "perm": "[main].[transactions_denormalized](id:3)",
                             "description": null,
                             "viz_type": "deck_hex",
                             "datasource_type": "table",
@@ -109,7 +109,7 @@
                     {
                         "__Slice__": {
                             "cache_timeout": null,
-                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"line\", \"slice_id\": 7, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"Last month\", \"metrics\": [{\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"-amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\", \"optionName\": \"_col_pound_amount\"}, \"aggregate\": \"AVG\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"AVG(pound_amount)\", \"optionName\": \"metric_tl8e4fscsnc_1tjk1rb5zsf\"}], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_va0aoellfxf_ebw2z8mqg06\"}], \"groupby\": [], \"limit\": null, \"timeseries_limit_metric\": null, \"order_desc\": true, \"contribution\": false, \"row_limit\": 10000, \"color_scheme\": \"bnbColors\", \"show_brush\": \"auto\", \"send_time_range\": false, \"show_legend\": true, \"rich_tooltip\": true, \"show_markers\": true, \"line_interpolation\": \"cardinal\", \"x_axis_label\": \"\", \"bottom_margin\": \"auto\", \"x_ticks_layout\": \"auto\", \"x_axis_format\": \"smart_date\", \"x_axis_showminmax\": false, \"y_axis_label\": \"\", \"left_margin\": \"auto\", \"y_axis_showminmax\": false, \"y_log_scale\": false, \"y_axis_format\": \".3s\", \"y_axis_bounds\": [null, null], \"rolling_type\": null, \"rolling_periods\": \"\", \"min_periods\": \"\", \"time_compare\": [], \"comparison_type\": null, \"resample_how\": \"sum\", \"resample_rule\": \"1D\", \"resample_fillmethod\": \"ffill\", \"annotation_layers\": [], \"remote_id\": 7, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"card_data\"}",
+                            "params": "{\"datasource\": \"3__table\", \"viz_type\": \"line\", \"slice_id\": 7, \"url_params\": {}, \"granularity_sqla\": \"created\", \"time_grain_sqla\": null, \"time_range\": \"Last month\", \"metrics\": [{\"expressionType\": \"SIMPLE\", \"column\": {\"id\": 68, \"column_name\": \"pound_amount\", \"verbose_name\": \"Amount in \\u00a3\", \"description\": \"\", \"expression\": \"-amount / 100\", \"filterable\": true, \"groupby\": true, \"is_dttm\": false, \"type\": \"\", \"database_expression\": \"\", \"python_date_format\": \"\", \"optionName\": \"_col_pound_amount\"}, \"aggregate\": \"AVG\", \"sqlExpression\": null, \"hasCustomLabel\": false, \"fromFormData\": true, \"label\": \"AVG(pound_amount)\", \"optionName\": \"metric_tl8e4fscsnc_1tjk1rb5zsf\"}], \"adhoc_filters\": [{\"expressionType\": \"SIMPLE\", \"subject\": \"pound_amount\", \"operator\": \">\", \"comparator\": \"0\", \"clause\": \"WHERE\", \"sqlExpression\": null, \"fromFormData\": true, \"filterOptionName\": \"filter_va0aoellfxf_ebw2z8mqg06\"}], \"groupby\": [], \"limit\": null, \"timeseries_limit_metric\": null, \"order_desc\": true, \"contribution\": false, \"row_limit\": 10000, \"color_scheme\": \"bnbColors\", \"show_brush\": \"auto\", \"send_time_range\": false, \"show_legend\": true, \"rich_tooltip\": true, \"show_markers\": true, \"line_interpolation\": \"cardinal\", \"x_axis_label\": \"\", \"bottom_margin\": \"auto\", \"x_ticks_layout\": \"auto\", \"x_axis_format\": \"smart_date\", \"x_axis_showminmax\": false, \"y_axis_label\": \"\", \"left_margin\": \"auto\", \"y_axis_showminmax\": false, \"y_log_scale\": false, \"y_axis_format\": \".3s\", \"y_axis_bounds\": [null, null], \"rolling_type\": null, \"rolling_periods\": \"\", \"min_periods\": \"\", \"time_compare\": [], \"comparison_type\": null, \"resample_how\": \"sum\", \"resample_rule\": \"1D\", \"resample_fillmethod\": \"ffill\", \"annotation_layers\": [], \"remote_id\": 7, \"datasource_name\": \"transactions_denormalized\", \"schema\": \"transactions_denormalized\", \"database_name\": \"main\"}",
                             "datasource_name": "transactions_denormalized",
                             "datasource_id": 3,
                             "id": 7,
@@ -117,7 +117,7 @@
                                 "__datetime__": "2019-04-27T23:16:15"
                             },
                             "changed_by_fk": 1,
-                            "perm": "[card_data].[transactions_denormalized](id:3)",
+                            "perm": "[main].[transactions_denormalized](id:3)",
                             "description": null,
                             "viz_type": "line",
                             "datasource_type": "table",
@@ -135,7 +135,7 @@
     "datasources": [
         {
             "__SqlaTable__": {
-                "perm": "[card_data].[transactions_denormalized](id:3)",
+                "perm": "[main].[transactions_denormalized](id:3)",
                 "id": 3,
                 "is_sqllab_view": false,
                 "table_name": "transactions_denormalized",
@@ -160,7 +160,7 @@
                     "__datetime__": "2019-04-22T13:56:28"
                 },
                 "sql": "",
-                "params": "{\"remote_id\": 3, \"database_name\": \"card_data\"}",
+                "params": "{\"remote_id\": 3, \"database_name\": \"main\"}",
                 "database": {
                     "__Database__": {
                         "changed_on": {
@@ -169,15 +169,15 @@
                         "extra": "{\r\n    \"metadata_params\": {},\r\n    \"engine_params\": {},\r\n    \"metadata_cache_timeout\": {},\r\n    \"schemas_allowed_for_csv_upload\": []\r\n}\r\n",
                         "expose_in_sqllab": true,
                         "id": 2,
-                        "perm": "[card_data].(id:2)",
+                        "perm": "[main].(id:2)",
                         "allow_run_sync": true,
                         "verbose_name": null,
                         "impersonate_user": false,
                         "allow_run_async": true,
-                        "database_name": "card_data",
+                        "database_name": "main",
                         "created_by_fk": null,
                         "allow_csv_upload": false,
-                        "sqlalchemy_uri": "postgresql+psycopg2:///superset_data",
+                        "sqlalchemy_uri": "postgresql+psycopg2:///superset",
                         "changed_by_fk": null,
                         "allow_ctas": false,
                         "password": null,

@@ -13,13 +13,12 @@ This in nothing more than a base Superset installation with pip, with some helpe
 
 ## Installation
 
-- run `bash setup_initial.sh`. This will create a virtualenv, install the requirements and create a config file
+- run `bash setup_one.sh`. This will create a virtualenv, install the requirements and create a config file
 - fill in the data in the newly created `config.ini` file in the root folder of the project.
   - to obtain credentials for Monzo, visit [the dev playground](developers.monzo.com/api/playground) and login
-  - the database location is in sqlalchemy format, for example `postgresql+psycopg2:///superset` connects to psql with no user/pwd and uses the DBs `superset_main` and `superset_data`
-  - (optional, if you use map format) login into mapbox and get your public token [here](https://account.mapbox.com/access-tokens/)
-- create the empty DBs manually (TODO: automate this)
-- run `bash setup_final.sh` to update the db schema, import the transactions from Monzo and import the dashboard/data sources in Superset. You will have to enter some data to setup a login
+  - the database location is in sqlalchemy format, for example `postgresql+psycopg2:///superset` connects to psql with no user/pwd and uses the DB `superset`
+  - (optional, to be able to load maps in your charts) login into mapbox and get your public token [here](https://account.mapbox.com/access-tokens/)
+- run `bash setup_two.sh` to create the db and update the schema, import the transactions from Monzo and import the dashboard/data sources in Superset. You will have to enter some data to setup a login
 
 ## Usage
 
@@ -33,7 +32,6 @@ This in nothing more than a base Superset installation with pip, with some helpe
 
 - This fiddle uses PSQL as the backend, but it should be somewhat easy to switch to a different one. Apparently Superset really shines when used alongside Druid.
 - Tests are...what tests?
-- Two different db are used for auth tables and Monzo imported data, with hardocoded names. If you load the examples, they will be loaded in the user db. This is a legacy of me playing with settings.
 - Tooltip content is specified with JS. I've used ES6 syntax so don't use an old browser.
 - The imported data is not really cleaned, or even imported fully, as I just cherry-picked a few info to play around with. Easy to extend/change that by tinkering with the files in monzo_interface.
 - The Monzo APIs interface requires a token that has to be copied manually, as no full OAuth token negotiation has been implemented.

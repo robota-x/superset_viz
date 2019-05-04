@@ -1,4 +1,4 @@
-from monzo_interface.db_helpers import get_session, get_or_create_by_id, write_models
+from monzo_interface.db_helpers import get_session, get_or_create_by_id, initialize_database
 from monzo_interface.models import Merchant, Transaction, TransactionDenormalized
 from monzo_interface.transaction_parser import parse_merchant, parse_transaction
 from monzo_interface.monzo_api import load_transaction_list
@@ -34,9 +34,9 @@ def import_data(update_cache=False):
 
 
 if __name__ == "__main__":
-    if "write_models" in argv:
-        write_models()
-        print("model created in database!")
+    if "initialize_database" in argv:
+        initialize_database()
+        print("database initialised!")
     
     if "import_data" in argv:
         import_data(update_cache=False)
